@@ -1,6 +1,7 @@
 import txt from './input.txt';
 
-var input = txt.slice(0, -1).split('\n'); // 这里有个坑，txt.split('\n').length = 1001，其中 txt.split('\n')[1000] = ''
+// 这里有个坑: 文本末尾有个换行，所以 txt.split('\n').length = 1001，其中 txt.split('\n')[1000] = ''
+var input = txt.slice(0, -1).split('\n');
 var res = input.reduce((totalArea, curStr) => {
   var dims = curStr.split('x');
   var lw = dims[0] * dims[1];
