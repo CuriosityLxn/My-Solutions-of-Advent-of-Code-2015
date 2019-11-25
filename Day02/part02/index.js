@@ -18,4 +18,3 @@ console.log('res: ', res); // res: 3842356
 控制台使用：var txt = document.querySelectorAll('pre')[0].innerText 取到文本内容，打印 res 值为 3842356
 */
 
-/* 简单粗暴的方法写起来简单，但应该有针对单个面积的更好的计算方法，可以再想一下 */
