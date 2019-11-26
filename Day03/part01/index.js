@@ -24,9 +24,7 @@ console.log('res:', res); // res: 2572
 
 // 补 去重法
 
-var txt = document.querySelectorAll('pre')[0].innerText;
 var x = 0, y = 0, visited = [];
-var input = txt.split('');
 
 input.forEach(dir => {
   dir === '^' && y++;
