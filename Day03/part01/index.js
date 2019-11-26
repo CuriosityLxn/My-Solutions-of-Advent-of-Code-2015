@@ -1,6 +1,6 @@
 import txt from './input.txt';
 
-var x = 0, y = 0, visited = [];
+var x = 0, y = 0, visited = {};
 var input = txt.split('');
 
 input.forEach(dir => {
@@ -36,4 +36,8 @@ input.forEach(dir => {
   visited.push(`(${x}, ${y})`);
 })
 
+// 遍历去重
 var res = visited.reduce((pre, acc) => pre.includes(acc) ? pre : [...pre, acc], []).length;
+
+// Set 对象去重，存储任何类型的唯一值。见 MDN: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set
+var res = [...new Set(visited)].length;
